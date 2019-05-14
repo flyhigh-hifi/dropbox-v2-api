@@ -219,7 +219,7 @@ function createDefaultRequestOptObject(resourceDescription){
 		uri: resourceDescription.uri,
 		json: true,
 		followRedirect: false,
-		headers: {}
+		headers: { 'Content-Type': 'application/octet-stream' }
 	}
 }
 
