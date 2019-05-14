@@ -40,7 +40,7 @@ const updateRequestOptsFnList = [
 	/* If resource requires upload stream, provide valid header */
 	(requestOpts, {requiresReadableStream}, userOpts) => {
 				if(requiresReadableStream) {
-					requestOpts.headers['Content-Type']= 'application/octet-stream';
+					requestOpts.headers['content-type']= 'application/octet-stream';
 				}
 	},
 	/* Sets request parameter as request body (for RPC requests) or as header (for DOWNLOAD / UPLOAD requests) */
@@ -219,7 +219,7 @@ function createDefaultRequestOptObject(resourceDescription){
 		uri: resourceDescription.uri,
 		json: true,
 		followRedirect: false,
-		headers: { 'Content-Type': 'application/octet-stream' }
+		headers: { 'content-type': 'application/octet-stream' }
 	}
 }
 
